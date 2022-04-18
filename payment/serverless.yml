@@ -1,0 +1,20 @@
+service: payment
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: eu-central-1
+  apiGateway:
+    apiKeys:
+      - paymentKey
+
+functions:
+  createCompany:
+    handler: handler.createCompany
+    events:
+      - httpApi:
+          path: /company
+          method: post
+          private: true

@@ -1,0 +1,41 @@
+service: supplier
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: eu-central-1
+  apiGateway:
+    apiKeys:
+      - supplierKey
+
+functions:
+  getCompanyDelta:
+    handler: handler.getCompanyDelta
+    events:
+      - httpApi:
+          path: /company/delta
+          method: get
+          private: true
+  getInvoiceDelta:
+    handler: handler.getInvoiceDelta
+    events:
+      - httpApi:
+          path: /invoice/delta
+          method: get
+          private: true
+  updatePayment:
+    handler: handler.updatePayment
+    events:
+      - httpApi:
+          path: /invoice/payment
+          method: post
+          private: true
+  createCompany:
+    handler: handler.createCompany
+    events:
+      - httpApi:
+          path: /company
+          method: post
+          private: true

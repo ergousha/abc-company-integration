@@ -1,0 +1,17 @@
+{
+  "name": "payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
