@@ -6,9 +6,6 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: eu-central-1
-  apiGateway:
-    apiKeys:
-      - paymentKey
 
 functions:
   createCompany:
@@ -17,4 +14,3 @@ functions:
       - httpApi:
           path: /company
           method: post
-          private: true
