@@ -25,10 +25,10 @@ functions:
     events:
       - httpApi:
           path: /invoice/payment
-          method: post
-  createCompany:
-    handler: handler.createCompany
+          method: put
+  createInternalSupplier:
+    handler: handler.createInternalSupplier
     events:
       - httpApi:
-          path: /company
+          path: /internalsupplier
           method: post

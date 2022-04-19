@@ -14,3 +14,21 @@ functions:
       - httpApi:
           path: /company
           method: post
+  createInvoice:
+    handler: handler.createInvoice
+    events:
+      - httpApi:
+          path: /invoice
+          method: post
+  getPayment:
+    handler: handler.getPayment
+    events:
+      - httpApi:
+          path: /payment
+          method: get
+  getInternalSupplier:
+    handler: handler.getInternalSupplier
+    events:
+      - httpApi:
+          path: /internalsupplier
+          method: get

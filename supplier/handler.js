@@ -43,7 +43,7 @@ module.exports.updatePayment = async () => {
   };
 };
 
-module.exports.createCompany = async () => {
+module.exports.createInternalSupplier = async () => {
   return {
     statusCode: 200,
     body: "success",
